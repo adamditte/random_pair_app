@@ -1,24 +1,43 @@
 require 'sinatra'
+
 require_relative 'random_pair.rb'
-require_relative 'formatter.rb'
+
+
 
 get '/' do
-    erb :student_number
+
+    erb :students1
+
 end
+
+
 
 post '/number' do
-	number = params[:student_number]
-	redirect '/names?student_number=' + number
+
+    num = params[:student_number]
+
+    redirect '/names?num=' + num
+
 end
+
+
 
 get '/names' do
-	number = params[:student_number]
-	erb :get_names, :locals => {:number => number}
+
+    num = params[:num]
+
+    erb :get_names, :locals => {:num => num}
+
 end
 
+
+
 post '/names' do
+
     names = params[:user_names]
-    random_names_array = randomizer(names)
-    name_pairs = fix(random_names_array)
-    erb :get_names_again, :locals => {:name_pairs => name_pairs}
+
+    random_pairs = random_pair(names)
+
+    erb :get_names_again, :locals => {:random_pairs => random_pairs}
+
 end

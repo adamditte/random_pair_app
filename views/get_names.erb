@@ -4,7 +4,7 @@ Great! You have <%=number%> students today!!
 <form method = "post" action = "names">
 	<% number.to_i.times do%>
 
-	<input type = "text" autofocus="autofocus" name = "user_names[]">
+	<input type = "text" autofocus="autofocus" name = "user_names[]".toUpperCase()>
 <%end
 %>
 	<input type = "submit">
