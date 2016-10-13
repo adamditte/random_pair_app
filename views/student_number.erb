@@ -1,6 +1,4 @@
-This is a random paring app. It will take a list of names and randomly pair them. Should your list have an odd number of names it will add the remaining name to the last group.<br>
-<br>
-
+<link rel="stylesheet" href = "css/style.css"
 
 <center><p>How many people are in class today?</p>
 <input type="text" id="myInput" oninput="myFunction()" >
@@ -18,7 +16,7 @@ function myFunction() {
 
     //var y = is equivelent to y = 
 
-    document.getElementById("demo").innerHTML = "Enter their names in the boxes below: " + y;
+    document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br> ";
 
 
 
@@ -30,6 +28,7 @@ var input = document.createElement("input");
 
 input.type = "text";
 input.name = "text" + i; //names the element
+input.id = "marv"
 document.getElementById("demo").appendChild(input).value;
 // i wants to make the contents of boxes to an array of strings called by variable
 }
