@@ -1,10 +1,10 @@
 
-Great! You have <%=number%> students today!!
+Enter the name of those in the class below.
 
 <form method = "post" action = "names">
-	<% number.to_i.times do%>
+	<% quantity.to_i.times do%>
 
-	<input type = "text" autofocus="autofocus" name = "user_names[]".toUpperCase()>
+	<input type = "text" autofocus="autofocus" name = "user_names[]">
 <%end
 %>
 	<input type = "submit">

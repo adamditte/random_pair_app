@@ -1,43 +1,28 @@
 require 'sinatra'
-
 require_relative 'random_pair.rb'
+
+# require_relative 'formatter.rb'
+
+
 
 
 
 get '/' do
-
-    erb :students1
-
+	erb :student_number
 end
 
-
-
-post '/number' do
-
-    num = params[:student_number]
-
-    redirect '/names?num=' + num
-
+post '/number_of_students' do
+	erb :get_names 
 end
 
-
-
-get '/names' do
-
-    num = params[:num]
-
-    erb :get_names, :locals => {:num => num}
-
+get '/get_names?' do
+	erb :get_names
 end
-
-
 
 post '/names' do
-
-    names = params[:user_names]
-
-    random_pairs = random_pair(names)
-
-    erb :get_names_again, :locals => {:random_pairs => random_pairs}
+	names = params.values # and this calls the value out of the hash it creates
+	puts params
+	results = randomizer(names)
+	"results are #{results}"
 
 end
