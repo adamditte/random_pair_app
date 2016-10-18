@@ -22,7 +22,7 @@ end
 post '/names' do
 	names = params.values # and this calls the value out of the hash it creates
 	puts params
-	results = randomizer(names)
-	"results are #{results}"
+	results = random_pair(names)
+	"The random pairs have been selected. #{results}"
 
 end
