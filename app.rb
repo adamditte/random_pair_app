@@ -20,9 +20,10 @@ get '/get_names?' do
 end
 
 post '/names' do
-	names = params.values # and this calls the value out of the hash it creates
+	names = params.value
 	puts params
-	results = random_pair(names)
-	"The random pairs have been selected. #{results}"
-
+	puts params.key
+	"names = #{names}"
+	# random_pairs = random_pair(names)
+	# erb :get_names_again, :locals => {:random_pairs => random_pairs}
 end
