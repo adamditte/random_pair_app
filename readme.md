@@ -1,0 +1,2 @@
+This app is designed to take a group of people and put them into random pairs. It takes in a number of students and produces that number of input boxes. Then the user can fill in names or groups 
+as they please. The app then takes those names and puts them into random pairs. This app can be used for putting people into teams on a group project.
